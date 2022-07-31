@@ -21,10 +21,15 @@ test(
     () => {expect(simpleCalculator("2", "4","+")).toBe(6);}
 );
 test(
-    "It handles missing operation",
-    () => {expect(simpleCalculator("2", "4")).toBe("Missing operator");}
+    "It handles missing operator with default operation  +",
+    () => {expect(simpleCalculator("2", "4")).toBe(6);}
 );
 test(
-    "It handles unaccepted operand with default operation  + ",
-    () => {expect(simpleCalculator("30", "4")).toBe(34);}
+    "It handles unaccepted operand with error message ",
+    () => {expect(simpleCalculator("30", "4", "&"))
+    .toBe("Error Operator not supported, use [+,-,*, /]");}
 );
+test(
+    "It handles the medulo operator to give reminder",
+    () => {expect(simpleCalculator(8,2,"%")).toBe(4)}
+)
