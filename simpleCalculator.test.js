@@ -1,4 +1,4 @@
-const simpleCalculator = require("./calculatorProject");
+const simpleCalculator = require("./simpleCalculator");
 //test ("", ()=>{})
 test(
     "It adds numbers 5 with 3 = 8 given + ",
@@ -23,4 +23,8 @@ test(
 test(
     "It handles missing operation",
     () => {expect(simpleCalculator("2", "4")).toBe("Missing operator");}
+);
+test(
+    "It handles unaccepted operand with default operation  + ",
+    () => {expect(simpleCalculator("30", "4")).toBe(34);}
 );
