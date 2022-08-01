@@ -6,7 +6,7 @@ function  simpleCalculator(a,b){
         "/": (a,b) => a / b,
         "%": (a,b) => a / b
     };
-    // Handle un suported opperators
+    // Handle un supported operators
     if(!(arguments[2] in ops) &&  arguments.length > 2){
         return "Error Operator not supported, use [+,-,*, /]";
     }
